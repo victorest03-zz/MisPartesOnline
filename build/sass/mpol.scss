@@ -1,0 +1,49 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    header{
+        .top-bar{
+            height: 55px;
+            width: 100%;
+            padding: 0 25px;
+            border-bottom: solid 2px #EFEFEF;
+            ul.nav{
+                height: 100%;
+                &>li{
+                    line-height: 55px;
+                    height: 100%;
+                    border-right: solid 2px #EFEFEF;
+                    border-left: solid 2px #EFEFEF;
+                    margin: 0;  
+                    &:first-child, &:last-child{
+                        border: none;
+                    }
+    
+                    &>a{
+                        height: 100%;
+                        padding: 0 20px;
+                        line-height: 55px;
+                        border-radius: 0;
+                        color: #000;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.1em;
+                        font-weight: 500;
+                        &>i{
+                            margin-left: 5px;
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .dropdown-menu{
+        border-radius: 0;
+    }
+}

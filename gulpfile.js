@@ -55,7 +55,8 @@ gulp.src(["./dist/js/**/*.js","!./dist/js/**/*.min.js"])
 
 gulp.task("serve",()=>{
     browserSync.init({
-        server: "./dist/"
+        server: "./dist/",
+        notify: false
     });
 
     gulp.watch("./dist/*.html").on('change', browserSync.reload);
