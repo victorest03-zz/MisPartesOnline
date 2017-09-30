@@ -1,3 +1,3 @@
 $(()=>{
-
+    $('#sliderHomePage').carousel()
 })

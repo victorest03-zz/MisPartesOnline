@@ -5,45 +5,245 @@ html(lang="es")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Mis Partes Online
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', rel='stylesheet')
-        link(rel="stylesheet", href="./plugins/bootstrap/css/bootstrap.min.css")
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900', rel='stylesheet')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', crossorigin='anonymous')
         link(rel="stylesheet", href="./plugins/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="./css/mpol.min.css")
+        //if lt IE 9
+            script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+            script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     body
         header
             .top-bar
-                ul.nav.nav-pills.pull-right
-                    li 
-                        a(href="#") Proteccion del Comprador
-                    li.dropdown
-                        a.dropdown-toggle(href='#', data-toggle='dropdown', aria-expanded='false')
+                ul.nav.justify-content-end
+                    li.nav-item.d-none.d-md-block
+                        a.nav-link.active(href='#') Proteccion del Comprador
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
                             span Enviar a: ** / US$
-                            i.fa.fa-angle-down
-                        ul.dropdown-menu.dropdown-menu-right(aria-labelledby='dLabel')
-                            li
-                                a(href='#') Action
-                            li
-                                a(href='#') Another action
-                            li
-                                a(href='#') Something else here
-                            li.divider(role='separator')
-                            li
-                                a(href='#') Separated link
-                    li.dropdown
-                        a.dropdown-toggle(href='#', data-toggle='dropdown', aria-expanded='false')
+                        .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
                             span Ayuda
-                            i.fa.fa-angle-down
-                        ul.dropdown-menu.dropdown-menu-right(aria-labelledby='dLabel')
-                            li
-                                a(href='#') Soporte
-                            li
-                                a(href='#') Contacto
-                            li.divider(role='separator')
-                            li
-                                a(href='#') Acerca de
+                        .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+            .search-bar
+                .row.align-items-center
+                    .col-md-4.d-none.d-md-block
+                        img.img-fluid(src="./image/logo.png", alt="Mis Partes Online")
+                    .col-md-4.col-sm-6
+                        .input-group
+                            input.form-control(type="search" placeholder="Buscar...")
+                            span.input-group-btn
+                                button.btn(type="button")
+                                    i.fa.fa-search
+                    .col-md-4.col-sm-6
+                        ul.nav.justify-content-end
+                            li.nav-item
+                                a.nav-link(href='#')
+                                    i.fa.fa-user
+                                    | Juan Perez
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+                                    i.fa.fa-shopping-cart
+                                        .cart-no 0
+                                .dropdown-menu
+                                    a.dropdown-item(href='#') Action
+                                    a.dropdown-item(href='#') Another action
+                                    a.dropdown-item(href='#') Something else here
+                                    .dropdown-divider
+                                    a.dropdown-item(href='#') Separated link
+            nav.navbar.navbar-expand-md
+                a.navbar-brand.d-md-none(href='#')
+                    img.img-fluid(src="./image/logo.png", alt="Mis Partes Online")
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMenu', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+                    span.fa.fa-bars
+                #navbarMenu.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            .nav-link(href='#') CATEGORIAS
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/cocina.png", alt="Cocina")
+                                |COCINA
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/lavanderia.png", alt="Lavanderia")
+                                |LAVANDERIA
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item
+                            .nav-link(href='#') SUBCATEGORIAS
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/partes.png", alt="Partes")
+                                |PARTES
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/accesorios.png", alt="Accesorios")
+                                |ACCESORIOS
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/quimicos.png", alt="Quimicos")
+                                |QUIMICOS
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
         
         .container
-            
-    script(src="./plugins/jquery/jquery-3.2.1.min.js")
-    script(src="./plugins/bootstrap/js/bootstrap.min.js")
-    script(src="./js/index.min.js")
+            #sliderHomePage.carousel.slide(data-ride="carousel")
+                ol.carousel-indicators
+                    li.active(data-target='#sliderHomePage', data-slide-to='0')
+                    li(data-target='#sliderHomePage', data-slide-to='1')
+                .carousel-inner(role='listbox')
+                    .carousel-item.active
+                        img.d-block.img-fluid(src='./image/rational-slide.jpg', alt='First slide')
+                    .carousel-item
+                        img.d-block.img-fluid(src='./image/turbochef-slide.png', alt='Second slide')
+                        .carousel-caption.d-none.d-md-block.text-left
+                            a.btn.btn-secondary(href="#") VER CATALOGO
+                a.carousel-control-prev(href='#sliderHomePage', role='button', data-slide='prev')
+                    span.fa.fa-chevron-left(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#sliderHomePage', role='button', data-slide='next')
+                    span.fa.fa-chevron-right(aria-hidden='true')
+                    span.sr-only Next
+            #listBrand.row
+                .col-md-12.text-center.text-md-right
+                    img.img-fluid(src="./image/moduline.png", alt="Moduline")
+                    img.img-fluid(src="./image/firex.png", alt="Moduline")
+                    img.img-fluid(src="./image/irinox.png", alt="Moduline")
+                    img.img-fluid(src="./image/turbochef.png", alt="Moduline")
+                    img.img-fluid(src="./image/electrolux.png", alt="Moduline")
+                    img.img-fluid(src="./image/rational.png", alt="Moduline")
+                    img.img-fluid(src="./image/welbilt.png", alt="Moduline")
+                    img.img-fluid(src="./image/aligroup.png", alt="Moduline")
+                    img.img-fluid(src="./image/itw.png", alt="Moduline")
+                    img.img-fluid(src="./image/themiddlebycorp.png", alt="Moduline")
+            #productsOfTheWeek.row
+                .container__title.col-12 PRODUCTOS DE LA SEMANA
+                .container__body
+                    .row
+                        .col
+                            .item__container.border
+                                .item__img
+                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__info
+                                    span.item__info__sencondary Manufacturer Part #:10.00.512
+                                    span.item__info__primary
+                                        |Rational o-ring 26 x 3.5
+                                        br
+                                        | (5 Pack)
+                                .item__shopping
+                                    .item__shopping__price
+                                        span.item__shopping__price__discount US$ 52.00
+                                        span.item__shopping__price__current US$35.00
+                                    .item__shopping__addCart
+                                        span AGREGAR
+                                        i.fa.fa-shopping-cart
+                        .col
+                            .item__container.border
+                                .item__img
+                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__info
+                                    span.item__info__sencondary Manufacturer Part #:10.00.512
+                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
+                                .item__shopping
+                                    .item__shopping__price
+                                        span.item__shopping__price__discount US$ 52.00
+                                        span.item__shopping__price__current US$35.00
+                                    .item__shopping__addCart
+                                        span AGREGAR
+                                        i.fa.fa-shopping-cart
+                        .col
+                            .item__container.border
+                                .item__img
+                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__info
+                                    span.item__info__sencondary Manufacturer Part #:10.00.512
+                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
+                                .item__shopping
+                                    .item__shopping__price
+                                        span.item__shopping__price__discount US$ 52.00
+                                        span.item__shopping__price__current US$35.00
+                                    .item__shopping__addCart
+                                        span AGREGAR
+                                        i.fa.fa-shopping-cart
+                        .col
+                            .item__container.border
+                                .item__img
+                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__info
+                                    span.item__info__sencondary Manufacturer Part #:10.00.512
+                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
+                                .item__shopping
+                                    .item__shopping__price
+                                        span.item__shopping__price__discount US$ 52.00
+                                        span.item__shopping__price__current US$35.00
+                                    .item__shopping__addCart
+                                        span AGREGAR
+                                        i.fa.fa-shopping-cart
+                        .col
+                            .item__container.border
+                                .item__img
+                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__info
+                                    span.item__info__sencondary Manufacturer Part #:10.00.512
+                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
+                                .item__shopping
+                                    .item__shopping__price
+                                        span.item__shopping__price__discount US$ 52.00
+                                        span.item__shopping__price__current US$35.00
+                                    .item__shopping__addCart
+                                        span AGREGAR
+                                        i.fa.fa-shopping-cart
+                        .col
+                            .item__container.border
+                                .item__img
+                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__info
+                                    span.item__info__sencondary Manufacturer Part #:10.00.512
+                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
+                                .item__shopping
+                                    .item__shopping__price
+                                        span.item__shopping__price__discount US$ 52.00
+                                        span.item__shopping__price__current US$35.00
+                                    .item__shopping__addCart
+                                        span AGREGAR
+                                        i.fa.fa-shopping-cart
+
+        script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js")
+        script(src="./plugins/jquery/jquery-3.2.1.min.js")
+        script(src="./plugins/bootstrap/js/bootstrap.min.js")
+        script(src="./js/index.min.js")

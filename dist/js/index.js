@@ -1,3 +1,5 @@
-"use strict";
+'use strict';
 
-$(function () {});
+$(function () {
+    $('#sliderHomePage').carousel();
+});
