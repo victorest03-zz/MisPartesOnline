@@ -2,4 +2,5 @@
 
 $(function () {
     $('#sliderHomePage').carousel();
+    $('#sliderOurBlog').carousel();
 });

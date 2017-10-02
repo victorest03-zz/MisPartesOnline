@@ -6,7 +6,7 @@ html(lang="es")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Mis Partes Online
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900', rel='stylesheet')
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', crossorigin='anonymous')
+        link(rel='stylesheet', href='./plugins/bootstrap/css/bootstrap.min.css', crossorigin='anonymous')
         link(rel="stylesheet", href="./plugins/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="./css/mpol.min.css")
         //if lt IE 9
@@ -151,99 +151,108 @@ html(lang="es")
                     img.img-fluid(src="./image/themiddlebycorp.png", alt="Moduline")
             #productsOfTheWeek.row
                 .container__title.col-12 PRODUCTOS DE LA SEMANA
-                .container__body
-                    .row
-                        .col
-                            .item__container.border
+                .container__body.row
+                    - for(var i=0;i<6;i++){
+                    .col-md-2
+                        .item__container.border.row
+                            .item__discount
+                                span 36% Dscto.
+                            .item__brand
+                                img.img-fluid(src="./image/rational.png", alt="Rational")
+                            .item__img.col-md-12
+                                img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                            .item__info.col-md-12
+                                span.item__info__sencondary Manufacturer Part #:10.00.512
+                                span.item__info__primary
+                                    |Rational o-ring 26 x 3.5 (5 Pack)
+                            .item__shopping.col-md-12.row
+                                .item__shopping__price.col-md-6
+                                    span.item__shopping__price__discount US$ 52.00
+                                    span.item__shopping__price__current US$ 35.00
+                                .item__shopping__addCart.col-md-6
+                                    a.btn(href="#")
+                                        |AGREGAR
+                                        i.fa.fa-shopping-cart
+                    - }
+            #newsSection.row
+                .col-sm-6
+                    img.img-fluid(src="./image/noticia1.png", alt="Noticia 1")
+                .col-sm-6
+                    img.img-fluid(src="./image/noticia2.png", alt="Noticia 1")
+            #productsInStock.row
+                .container__title.col-12 PRODUCTOS DISPONIBLES
+                .container__body.row
+                    - for(var i=0;i<6;i++){
+                    .col-md-4
+                        .item__container.border.row
+                            .item__discount
+                                span 36% Dscto.
+                            .item__brand
+                                img.img-fluid(src="./image/rational.png", alt="Rational")
+                            .col-md-6
                                 .item__img
                                     img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                                .item__shopping__addCart
+                                    a.btn(href="#")
+                                        |AGREGAR
+                                        i.fa.fa-shopping-cart
+                            .col-md-6
                                 .item__info
                                     span.item__info__sencondary Manufacturer Part #:10.00.512
                                     span.item__info__primary
-                                        |Rational o-ring 26 x 3.5
-                                        br
-                                        | (5 Pack)
-                                .item__shopping
-                                    .item__shopping__price
-                                        span.item__shopping__price__discount US$ 52.00
-                                        span.item__shopping__price__current US$35.00
-                                    .item__shopping__addCart
-                                        span AGREGAR
-                                        i.fa.fa-shopping-cart
-                        .col
-                            .item__container.border
-                                .item__img
-                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
-                                .item__info
-                                    span.item__info__sencondary Manufacturer Part #:10.00.512
-                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
-                                .item__shopping
-                                    .item__shopping__price
-                                        span.item__shopping__price__discount US$ 52.00
-                                        span.item__shopping__price__current US$35.00
-                                    .item__shopping__addCart
-                                        span AGREGAR
-                                        i.fa.fa-shopping-cart
-                        .col
-                            .item__container.border
-                                .item__img
-                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
-                                .item__info
-                                    span.item__info__sencondary Manufacturer Part #:10.00.512
-                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
-                                .item__shopping
-                                    .item__shopping__price
-                                        span.item__shopping__price__discount US$ 52.00
-                                        span.item__shopping__price__current US$35.00
-                                    .item__shopping__addCart
-                                        span AGREGAR
-                                        i.fa.fa-shopping-cart
-                        .col
-                            .item__container.border
-                                .item__img
-                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
-                                .item__info
-                                    span.item__info__sencondary Manufacturer Part #:10.00.512
-                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
-                                .item__shopping
-                                    .item__shopping__price
-                                        span.item__shopping__price__discount US$ 52.00
-                                        span.item__shopping__price__current US$35.00
-                                    .item__shopping__addCart
-                                        span AGREGAR
-                                        i.fa.fa-shopping-cart
-                        .col
-                            .item__container.border
-                                .item__img
-                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
-                                .item__info
-                                    span.item__info__sencondary Manufacturer Part #:10.00.512
-                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
-                                .item__shopping
-                                    .item__shopping__price
-                                        span.item__shopping__price__discount US$ 52.00
-                                        span.item__shopping__price__current US$35.00
-                                    .item__shopping__addCart
-                                        span AGREGAR
-                                        i.fa.fa-shopping-cart
-                        .col
-                            .item__container.border
-                                .item__img
-                                    img.img-fluid(src="./image/product01.png", alt="Producto 01")
-                                .item__info
-                                    span.item__info__sencondary Manufacturer Part #:10.00.512
-                                    span.item__info__primary Rational o-ring 26 x3.5 (5 Pack)
-                                .item__shopping
-                                    .item__shopping__price
-                                        span.item__shopping__price__discount US$ 52.00
-                                        span.item__shopping__price__current US$35.00
-                                    .item__shopping__addCart
-                                        span AGREGAR
-                                        i.fa.fa-shopping-cart
-
-        script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js")
-        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js")
+                                        |Rational o-ring 26 x 3.5 (5 Pack)
+                                .item__shopping__price
+                                    span.item__shopping__price__discount US$ 52.00
+                                    span.item__shopping__price__current US$ 35.00
+                    - }
+            #OurBlog.row
+                .container__title.col-12 NUESTRO BLOG
+                .container__body.row
+                    #sliderOurBlog.carousel.slide(data-ride="carousel")
+                        .carousel-inner(role='listbox')
+                            .carousel-item.active
+                                .row
+                                    - for(var i=0;i<4;i++){
+                                    .col-3
+                                        .sliderOurBlog__item
+                                            .sliderOurBlog__item__img
+                                                img.img-fluid(src="./image/blog1.png", alt="")
+                                            .sliderOurBlog__item__title
+                                                span Rational presenta el nuevo SelfCooking Center
+                                            .sliderOurBlog__item__date
+                                                span 23 Febrero 2017
+                                    - }
+                            .carousel-item
+                                .row
+                                    - for(var i=0;i<4;i++){
+                                    .col-3
+                                        .sliderOurBlog__item
+                                            .sliderOurBlog__item__img
+                                                img.img-fluid(src="./image/blog2.png", alt="")
+                                            .sliderOurBlog__item__title
+                                                span La Selección y la comida peruana unidas en un comercial de Marca Perú
+                                            .sliderOurBlog__item__date
+                                                span 21 Abril 2017
+                                    - }
+                        a.carousel-control-prev(href='#sliderOurBlog', role='button', data-slide='prev')
+                            span.fa.fa-chevron-left(aria-hidden='true')
+                            span.sr-only Previous
+                        a.carousel-control-next(href='#sliderOurBlog', role='button', data-slide='next')
+                            span.fa.fa-chevron-right(aria-hidden='true')
+                            span.sr-only Next
+        #contactUs.row
+                .col-sm-6
+                    p Si quieres recibir novedades de nuestros productos!
+                .col-sm-6
+                    .input-group
+                        span.input-group-addon
+                            i.fa.fa-envelope-o
+                        input.form-control(type="search" placeholder="Escriba su e-mail")
+                        span.input-group-btn
+                            button.btn(type="button") Suscríbete
+        script(src="./plugins/bootstrap/js/jquery.slim.min.js")
+        script(src="./plugins/bootstrap/js/popper.min.js")
+        script(src="./plugins/bootstrap/js/bootstrap.min.js")
         script(src="./plugins/jquery/jquery-3.2.1.min.js")
         script(src="./plugins/bootstrap/js/bootstrap.min.js")
         script(src="./js/index.min.js")

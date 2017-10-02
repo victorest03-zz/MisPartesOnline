@@ -1,3 +1,4 @@
 $(()=>{
     $('#sliderHomePage').carousel()
+    $('#sliderOurBlog').carousel()
 })
