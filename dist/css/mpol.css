@@ -573,10 +573,12 @@ body #contactUs .col-sm-6:last-child .input-group-addon {
   background-color: #fff;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: 0;
 }
 
 body #contactUs .col-sm-6:last-child .input {
   border-radius: 0;
+  border-left: 0;
 }
 
 body .btn, body .dropdown-menu {
