@@ -470,24 +470,22 @@ body{
         margin: 0;
         background-color: #F3BA1F;
         align-items: center;
-        .col-sm-6{
-            &:first-child{
-                p{
-                    color: #243C55;
-                    font-size: 25px;
-                }
+        .col-sm-7{
+            p{
+                color: #243C55;
+                font-size: 25px;
             }
-            &:last-child{
-                .input-group-addon{
-                    background-color: #fff;
-                    border-radius: 0;
-                    border: 1px solid rgba(0,0,0,.15);
-                    border-right: 0;
-                }
-                .input{
-                    border-radius: 0;
-                    border-left: 0;
-                }
+        }
+        .col-sm-5{
+            .input-group-addon{
+                background-color: #fff;
+                border-radius: 0;
+                border: 1px solid rgba(0,0,0,.15);
+                border-right: 0;
+            }
+            .input{
+                border-radius: 0;
+                border-left: 0;
             }
         }
     }

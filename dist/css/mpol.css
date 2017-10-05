@@ -564,19 +564,19 @@ body #contactUs {
           align-items: center;
 }
 
-body #contactUs .col-sm-6:first-child p {
+body #contactUs .col-sm-7 p {
   color: #243C55;
   font-size: 25px;
 }
 
-body #contactUs .col-sm-6:last-child .input-group-addon {
+body #contactUs .col-sm-5 .input-group-addon {
   background-color: #fff;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-right: 0;
 }
 
-body #contactUs .col-sm-6:last-child .input {
+body #contactUs .col-sm-5 .input {
   border-radius: 0;
   border-left: 0;
 }
