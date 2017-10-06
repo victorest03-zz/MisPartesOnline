@@ -567,6 +567,7 @@ body #contactUs {
 body #contactUs .col-sm-7 p {
   color: #243C55;
   font-size: 25px;
+  margin: 0;
 }
 
 body #contactUs .col-sm-5 .input-group-addon {
@@ -574,11 +575,21 @@ body #contactUs .col-sm-5 .input-group-addon {
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-right: 0;
+  margin: 1px 0;
+}
+
+body #contactUs .col-sm-5 .input-group-addon i {
+  color: #233B58;
 }
 
 body #contactUs .col-sm-5 .input {
   border-radius: 0;
-  border-left: 0;
+  border-left-width: 0px;
+}
+
+body #contactUs .col-sm-5 button.btn {
+  background: #233B58;
+  color: #fff;
 }
 
 body .btn, body .dropdown-menu {

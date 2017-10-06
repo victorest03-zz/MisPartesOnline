@@ -474,6 +474,7 @@ body{
             p{
                 color: #243C55;
                 font-size: 25px;
+                margin: 0;
             }
         }
         .col-sm-5{
@@ -482,10 +483,18 @@ body{
                 border-radius: 0;
                 border: 1px solid rgba(0,0,0,.15);
                 border-right: 0;
+                margin: 1px 0;
+                i{
+                    color: #233B58;
+                }
             }
             .input{
                 border-radius: 0;
-                border-left: 0;
+                border-left-width: 0px;
+            }
+            button.btn{
+                background: #233B58;
+                color: #fff;
             }
         }
     }
