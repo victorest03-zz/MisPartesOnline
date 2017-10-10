@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Mis Partes Online
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900', rel='stylesheet')
+        link(rel='stylesheet', href='./plugins/bootstrap/css/bootstrap.min.css', crossorigin='anonymous')
+        link(rel="stylesheet", href="./plugins/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="./css/mpol.min.css")
+        //if lt IE 9
+            script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+            script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        block styles
+    body
+        header
+            .top-bar
+                ul.nav.justify-content-end
+                    li.nav-item.d-none.d-md-block
+                        a.nav-link.active(href='#') Proteccion del Comprador
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+                            span Enviar a: ** / US$
+                        .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+                            span Ayuda
+                        .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+            .search-bar
+                .row.align-items-center
+                    .col-md-4.d-none.d-md-block
+                        img.img-fluid(src="./image/logo.png", alt="Mis Partes Online")
+                    .col-md-4.col-sm-6
+                        .input-group
+                            input.form-control(type="search" placeholder="Buscar...")
+                            span.input-group-btn
+                                button.btn(type="button")
+                                    i.fa.fa-search
+                    .col-md-4.col-sm-6
+                        ul.nav.justify-content-end
+                            li.nav-item
+                                a.nav-link(href='#')
+                                    i.fa.fa-user
+                                    | Juan Perez
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+                                    i.fa.fa-shopping-cart
+                                        .cart-no 0
+                                .dropdown-menu
+                                    a.dropdown-item(href='#') Action
+                                    a.dropdown-item(href='#') Another action
+                                    a.dropdown-item(href='#') Something else here
+                                    .dropdown-divider
+                                    a.dropdown-item(href='#') Separated link
+            nav.navbar.navbar-expand-md
+                a.navbar-brand.d-md-none(href='#')
+                    img.img-fluid(src="./image/logo.png", alt="Mis Partes Online")
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMenu', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+                    span.fa.fa-bars
+                #navbarMenu.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            .nav-link(href='#') CATEGORIAS
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/cocina.png", alt="Cocina")
+                                |COCINA
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/lavanderia.png", alt="Lavanderia")
+                                |LAVANDERIA
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item
+                            .nav-link(href='#') SUBCATEGORIAS
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/partes.png", alt="Partes")
+                                |PARTES
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/accesorios.png", alt="Accesorios")
+                                |ACCESORIOS
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item.dropdown
+                            a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                img.img-fluid(src="./image/quimicos.png", alt="Quimicos")
+                                |QUIMICOS
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            .dropdown-menu(aria-labelledby='dropdown01')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here
+        
+        .container
+            block container
+        #contactUs.row
+            .col-sm-7.text-center
+                p Si quieres recibir novedades de nuestros productos!
+            .col-sm-5
+                .input-group
+                    span.input-group-addon
+                        i.fa.fa-envelope-o
+                    input.form-control(type="email" placeholder="Escriba su e-mail")
+                    span.input-group-btn
+                        button.btn(type="button") Suscríbete
+        footer
+            .row
+                .col-sm-12.text-left
+                    img.img-fluid(src="./image/logo-notwhite.png", alt="MisPartesOnline")
+                .col-sm-4#aboutUs
+                    .container__footer
+                        .container__footer__title ACERCA DE 
+                            br 
+                            |NOSOTROS
+                        .container__footer__body
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione ea facere atque eveniet in. Aut quaerat, ut sunt iure, modi necessitatibus quos obcaecati nulla consequuntur quibusdam aspernatur delectus accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione ea facere atque eveniet in. Aut quaerat, ut sunt iure, modi necessitatibus quos obcaecati nulla consequuntur quibusdam aspernatur delectus accusantium. 
+                .col-sm-2#categories
+                    .container__footer
+                        .container__footer__title CATEGORÍAS
+                        .container__footer__body
+                            ul
+                                li
+                                    a.nav-link(href='#')
+                                        img.img-fluid(src="./image/cocina-notwhite.png", alt="Cocina")
+                                        |COCINA
+                                li
+                                    a.nav-link(href='#')
+                                        img.img-fluid(src="./image/lavanderia-notwhite.png", alt="Cocina")
+                                        |LAVANDERÍA
+                .col-sm-2#subcategories
+                    .container__footer
+                        .container__footer__title SUB CATEGORÍAS
+                        .container__footer__body
+                            ul
+                                li
+                                    a.nav-link(href='#')
+                                        img.img-fluid(src="./image/partes-notwhite.png", alt="Cocina")
+                                        |PARTES
+                                li
+                                    a.nav-link(href='#')
+                                        img.img-fluid(src="./image/accesorios-notwhite.png", alt="Cocina")
+                                        |ACCESORIOS
+                                li
+                                    a.nav-link(href='#')
+                                        img.img-fluid(src="./image/quimicos-notwhite.png", alt="Cocina")
+                                        |QUIMICOS
+                .col-sm-4#requestSpecialist
+                    img.img-fluid(src="./image/icon-tecnico-notwhite.png", alt="Tecnico")
+                    button.btn(type="button") SOLICITA UN ESPECIALISTA
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam veritatis enim dolores quasi nisi sint, facilis eos minima.
+        script(src="./plugins/jquery/jquery-3.2.1.min.js")
+        script(src="./plugins/bootstrap/js/popper.min.js")
+        script(src="./plugins/bootstrap/js/bootstrap.min.js")
+        block scripts

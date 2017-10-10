@@ -63,7 +63,7 @@ gulp.task("serve",()=>{
 });
 
 gulp.task("default",["CompilePug","CompileSass","compilejs","minifycss","minifyjs","serve"],()=>{
-    gulp.watch("./build/pug/**/*.pug",["CompilePug"]);
+    gulp.watch("./build/pug/**/!(_)*.pug",["CompilePug"]);
     gulp.watch("./build/sass/**/*.scss",["CompileSass"]);
     gulp.watch(["./dist/css/**/*.css", "!./dist/css/**/*.min.css"],["minifycss"]);
     gulp.watch(["./build/js/**/*.js"],["compilejs"]);

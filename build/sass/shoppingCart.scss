@@ -1,0 +1,132 @@
+.container{
+    margin-top: 20px;
+    &__title{
+        padding: 15px 200px;
+        h2{
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px){
+            padding: 15px 25px;
+        }
+    }
+    &__body{
+        padding: 0 200px;
+        @media (max-width: 768px){
+            padding: 0 25px;
+        }
+        .cart{
+            margin-bottom: 10px;
+            &__table{
+                table{
+                    margin: 0 auto;
+                    thead{
+                        background-color: #ffe3e3;
+                        tr{
+                            th{
+                                font-weight: normal;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr td{
+                            &:nth-child(3){
+                                min-width: 100px;
+                                img{
+                                    width: 80px;
+                                    max-height: 80px;
+                                    height: auto;
+                                }
+                            }
+                            &:nth-child(4){
+                                font-weight: bold;
+                            }
+                            &:nth-child(6){
+                                input{
+                                    width: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__custom{
+                padding: 15px;
+                background-color: #f6f6f6;
+                button{
+                    font-weight: normal;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .purchaseInfo{
+            border-top: solid 1px #ddd;
+            padding: 0 0 50px;
+            .row{
+                margin-left: 0;
+                margin-right: 0;
+            }
+            span{
+                &.title,&.subTitle{
+                    display: block;
+                }
+                &.title{
+                    margin: 0 0 5px;
+                    font-size: 18px;
+                    color: #444;
+                    font-weight: 600;
+                }
+                &.subTitle{
+                    font-size: 14px;
+                    color: #444;
+                    margin: 0 0 10px;
+                }
+            }
+
+            &__collaterals,&__totals{
+                padding: 25px 2.5% 0 2.5%;
+            }
+
+            &__collaterals{
+                &__discountCode, &__giftCards, &__estimate{
+                    margin: 0 0 20px;
+                    label,input,select,.btn{
+                        font-size: 14px;
+                    }
+                }
+            }
+            &__totals{
+                background-color: #F9F9F9;
+                font-size: 14px;
+                &__info{
+                    border-bottom: 1px solid #ddd;
+                    padding: 5px 30px 15px;
+                    margin: 0 0 20px;
+                    table{
+                        width: 100%;
+                        border-collapse: collapse;
+                        
+                        tr td{
+                            padding: 4px 0;
+                        }
+                    }
+                }
+                &__termOfService{
+                    margin: 0 0 20px;
+                    padding: 0 30px;
+                    label{
+                        display: initial;
+                    }
+                }
+                &__checkOut{
+                    button.btn{
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+extends _layout.pug
+block styles
+    link(rel="stylesheet", href="./css/shoppingCart.min.css")
+block container
+    .container__title
+        h2.text-left Carrito de compras
+    .container__body
+        .cart
+            .cart__table
+                table.table.table-hover.table-bordered.table-responsive
+                    colgroup
+                        col(width="1")
+                        col(width="1")
+                        col(width="1")
+                        col
+                        col(width="1")
+                        col(width="1")
+                        col(width="1")
+                    thead
+                        tr
+                            th Eliminar
+                            th SKU
+                            th Imagen
+                            th Producto(s)
+                            th Precio
+                            th Cant.
+                            th Total
+                    tbody
+                        tr
+                            td.text-center.align-middle
+                                input(type="checkbox")
+                            td.align-middle AP_MBP_1213
+                            td
+                                img.img-fluid(src="./image/product01.png", alt="Producto01")
+                            td.align-middle RATIONAL O-RING 26 X 3.5 (5 PACK)
+                            td.align-middle US$35.00
+                            td.align-middle
+                                input.text-center(type="number" value="1")
+                            td.align-middle US$35.00
+                        tr
+                            td.text-center.align-middle
+                                input(type="checkbox")
+                            td.align-middle AP_MBP_1213
+                            td
+                                img.img-fluid(src="./image/product01.png", alt="Producto01")
+                            td.align-middle RATIONAL O-RING 26 X 3.5 (5 PACK)
+                            td.align-middle US$35.00
+                            td.align-middle
+                                input.text-center(type="number" value="1")
+                            td.align-middle US$35.00
+            .cart__custom.text-right
+                button.btn.btn-primary(type="button") Actualizar Carrito
+                button.btn.btn-secondary(type="button") Continuar Compra
+        .purchaseInfo
+            .row
+                .col-sm-6.purchaseInfo__collaterals
+                    .purchaseInfo__collaterals__discountCode
+                        span.title Codigo Descuento
+                        span.subTitle Ingrese su cupon aqui
+                        .input-group
+                            input.form-control(type="text" placeholder="Ingrese Cupón")
+                            span.input-group-btn
+                                button.btn(type="button") Aplicar Cupón
+                    .purchaseInfo__collaterals__giftCards
+                        span.title Gift Cards
+                        span.subTitle Ingrese su Gift Card aqui
+                        .input-group
+                            input.form-control(type="text" placeholder="Ingrese Gift Card")
+                            span.input-group-btn
+                                button.btn(type="button") Agregar Gift Card
+                    .purchaseInfo__collaterals__estimate
+                        span.title Precio estimado de envio
+                        span.subTitle Ingresa su destino para obtener un precio estimado de envío
+                        .form-group
+                            label(for="cboPais") País
+                            select.form-control#cboPais(name="cboPais")
+                                option Seleccione País
+                                option Perú
+                                option Colombia
+                                option Mexico
+                        .form-group
+                            label(for="cboProvincia") Estado / Provincia
+                            select.form-control#cboProvincia(name="cboProvincia")
+                                option Seleccione Estado / Provincia
+                                option Perú
+                                option Colombia
+                                option Mexico
+                        .form-group
+                            label(for="txtCodePostal") Codigo Postal
+                            input.form-control#txtCodePostal(type="text")
+                .col-sm-6.purchaseInfo__totals
+                    .purchaseInfo__totals__info
+                        table
+                            tbody
+                                tr.order__subtotal
+                                    td.text-left Sub-Total:
+                                    td.text-right US$ 58.80
+                                tr.shipping__cost
+                                    td.text-left Shipping:
+                                    td.text-right US$ 0.00
+                                tr.tax__value
+                                    td.text-left Tax:
+                                    td.text-right US$ 0.00
+                                tr.order__total
+                                    td.text-left Total:
+                                    td.text-right US$ 58.80
+                    .purchaseInfo__totals__termOfService
+                        input(type="checkbox")
+                        label Estoy de acuerdo con los términos de servicio y me adhiero a ellos incondicionalmente 
+                        a(href="#") (leer)
+                    .purchaseInfo__totals__checkOut.text-right
+                        button.btn.btn-success CHECKOUT
+block scripts

@@ -1,0 +1,27 @@
+extends _layout.pug
+block styles
+    link(rel="stylesheet", href="./css/register.min.css")
+block container
+    .container__title
+        h2.text-center Registro
+    .container__body
+        .fieldset
+            .fieldset__title Datos Personales
+            .fieldset__form
+                .form-group.row
+                    .col-sm-2.col-form-label Genero
+                    .col-sm-10
+                        .form-check
+                            label.form-check-label
+                                input.form-check-input(type="checkbox")
+                                |Hombre
+                                input.form-check-input(type="checkbox")
+                                |Mujer
+                .form-group.row
+                    .col-sm-2.col-form-label Nombres
+                    .col-sm-10
+                        input.form-control(type="text")
+                .form-group.row
+                    .col-sm-2.col-form-label Apellidos
+                    .col-sm-10
+                        input.form-control(type="text")
