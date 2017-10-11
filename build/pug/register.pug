@@ -11,11 +11,13 @@ block container
                 .form-group.row
                     .col-sm-2.col-form-label Genero
                     .col-sm-10
-                        .form-check
+                        .form-check.form-check-inline
                             label.form-check-label
-                                input.form-check-input(type="checkbox")
+                                input.form-check-input(type="radio" name="chkGenero")
                                 |Hombre
-                                input.form-check-input(type="checkbox")
+                        .form-check.form-check-inline
+                            label.form-check-label
+                                input.form-check-input(type="radio"  name="chkGenero")
                                 |Mujer
                 .form-group.row
                     .col-sm-2.col-form-label Nombres
@@ -25,3 +27,16 @@ block container
                     .col-sm-2.col-form-label Apellidos
                     .col-sm-10
                         input.form-control(type="text")
+                .form-group.row
+                    .col-sm-2.col-form-label Fecha Cumpleaños
+                    .col-sm-10.row
+                        .col
+                            select.form-control(name='DateOfBirthDay')
+                                option(value='0') Dia
+                        .col
+                            select.form-control(name='DateOfBirthMonth')
+                                option(value='0') Mes
+                        .col
+                            select.form-control(name='DateOfBirthYear')
+                                option(value='0') Año
+                            
