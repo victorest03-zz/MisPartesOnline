@@ -6,11 +6,11 @@ block container
         h2.text-center Registro
     .container__body
         .fieldset
-            .fieldset__title Datos Personales
+            .fieldset__title.text-center Datos Personales
             .fieldset__form
-                .form-group.row
-                    .col-sm-2.col-form-label Genero
-                    .col-sm-10
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Genero:
+                    .col-sm-5.col-md-3
                         .form-check.form-check-inline
                             label.form-check-label
                                 input.form-check-input(type="radio" name="chkGenero")
@@ -19,24 +19,55 @@ block container
                             label.form-check-label
                                 input.form-check-input(type="radio"  name="chkGenero")
                                 |Mujer
-                .form-group.row
-                    .col-sm-2.col-form-label Nombres
-                    .col-sm-10
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Nombres:
+                    .col-sm-5.col-md-3
                         input.form-control(type="text")
-                .form-group.row
-                    .col-sm-2.col-form-label Apellidos
-                    .col-sm-10
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Apellidos:
+                    .col-sm-5.col-md-3
                         input.form-control(type="text")
-                .form-group.row
-                    .col-sm-2.col-form-label Fecha Cumpleaños
-                    .col-sm-10.row
-                        .col
-                            select.form-control(name='DateOfBirthDay')
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Fecha Cumpleaños:
+                    .col-sm-5.col-md-3
+                        .dateOfBirth
+                            select.dateOfBirth__Day.form-control(name='DateOfBirthDay')
                                 option(value='0') Dia
-                        .col
-                            select.form-control(name='DateOfBirthMonth')
+                            select.dateOfBirth__Month.form-control(name='DateOfBirthMonth')
                                 option(value='0') Mes
-                        .col
-                            select.form-control(name='DateOfBirthYear')
+                            select.dateOfBirth__Year.form-control(name='DateOfBirthYear')
                                 option(value='0') Año
-                            
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Email:
+                    .col-sm-5.col-md-3
+                        input.form-control(type="email")
+        .fieldset
+            .fieldset__title.text-center Detalles de la compañía
+            .fieldset__form
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Nombre de empresa:
+                    .col-sm-5.col-md-3
+                        input.form-control(type="text")
+        .fieldset
+            .fieldset__title.text-center Opciones
+            .fieldset__form
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Noticias:
+                    .col-sm-5.col-md-3
+                        .form-check.form-check-inline
+                            label.form-check-label
+                                input.form-check-input(type="checkbox" name="chkNewsletter")
+                                |Recibir Noticias de ofertas y productos nuevos
+        .fieldset
+            .fieldset__title.text-center Tu contraseña
+            .fieldset__form
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Contraseña:
+                    .col-sm-5.col-md-3
+                        input.form-control(type="text")
+                .form-group.row.justify-content-center
+                    label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Confirmar contraseña:
+                    .col-sm-5.col-md-3
+                        input.form-control(type="text")
+        .buttons.text-center
+            button.btn.btn-primary(type=submit) Registrar

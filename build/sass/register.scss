@@ -1,0 +1,58 @@
+.container{
+    .container__title{
+        min-height: 50px;
+        margin: 0 0 25px;
+        border-bottom: 1px solid #ddd;
+        padding: 6px 10px;
+        h2{
+            font-size: 30px;
+            font-weight: normal;
+            color: #444;
+        }
+    }
+    .container__body{
+        .fieldset{
+            margin: 0 0 40px;
+            .fieldset__title{
+                margin: 0 0 15px;
+                padding: 0 10px;
+                font-size: 20px;
+                color: #444;
+            }
+            .fieldset__form{
+                position: relative;
+                border-top: 1px solid #e6e6e6;
+                background-color: #f9f9f9;
+                padding: 30px 15px;
+
+                input[type=text],.dateOfBirth{
+                    width: 100%;
+                }
+
+                label,input{
+                    font-size: 14px;
+                }
+
+                .dateOfBirth{
+                    display: flex;
+                    justify-content: space-between;
+                    &__Day,&__Month,&__Year{
+                        display: inline-block;
+                        width: 31%;
+                    }
+                }
+            }
+        }
+        .buttons{
+            margin: 0 0 30px;
+            button{
+                padding: 10px 30px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-size: 15px
+            }
+        }
+    }
+    margin: 0 0 100px;
+}

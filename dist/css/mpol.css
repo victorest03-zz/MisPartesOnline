@@ -114,6 +114,7 @@ body header > nav.navbar {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   border-bottom: solid 2px #EFEFEF;
+  margin: 0 auto 30px;
 }
 
 body header > nav.navbar #navbarMenu ul li.nav-item:not(.dropdown) .nav-link {
@@ -178,6 +179,7 @@ body header > nav.navbar #navbarMenu ul li.nav-item .nav-link:after {
 body .container {
   max-width: 100%;
   padding: 0 40px;
+  margin: 0 0 100px;
 }
 
 @media (max-width: 768px) {
@@ -363,4 +365,8 @@ body .carousel a.carousel-control-prev, body .carousel a.carousel-control-next {
 
 body .border {
   border: 2px solid #e9eeef !important;
+}
+
+body .form-check-input {
+  margin-right: 5px;
 }

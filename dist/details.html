@@ -84,6 +84,48 @@
       </nav>
     </header>
     <div class="container">
+      <div class="container__title">
+        <div class="container__title__historyNavigate">
+          <ul>
+            <li><span><a href="#"><span>Home</span></a></span><span class="delimiter">/</span></li>
+            <li><span><a href="#"><span>cocina</span></a></span><span class="delimiter">/</span></li>
+            <li><span><a href="#"><span>Accesorio</span></a></span><span class="delimiter">/</span></li>
+            <li><span><a href="#"><span>Mangera</span></a></span><span class="delimiter"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container__body">
+        <div class="product row">
+          <div class="col-sm-6 product__gallery">
+            <div class="product__gallery__picture"><img class="img-fluid" src="./image/product-large.jpeg" alt=""/></div>
+            <div class="product__gallery__pictureThumbs">
+              <div class="product__gallery__pictureThumbs__item"><img class="img-fluid" src="./image/product-short-1.jpeg" alt=""/></div>
+              <div class="product__gallery__pictureThumbs__item"><img class="img-fluid" src="./image/product-short-2.jpeg" alt=""/></div>
+            </div>
+          </div>
+          <div class="col-sm-6 product__overview">
+            <div class="product__overview__name">HTC One Mini Blue</div>
+            <div class="product__overview__descriptionShort">HTC One and HTC One Mini now available in bright blue hue</div>
+            <div class="product__overview__availability"><span class="label">Availability: </span><span class="value">In stock</span></div>
+            <div class="product__overview__additionalDetails">
+              <div class="sku"><span class="label">SKU:</span><span class="value">OM_HTC_BL</span></div>
+            </div>
+            <div class="product__overview__prices"><span class="price">US$ 100.00</span></div>
+            <div class="product__overview__addToCart">
+              <div class="input-group">
+                <input class="form-control" type="text" value="1"/><span class="input-group-btn">
+                  <button class="btn" type="button"><i class="fa fa-">AGREGAR A CARRITO</i></button></span>
+              </div>
+            </div>
+            <div class="product__overview__buttons">
+              <button class="btn btn-primary" type="button">Agregar a favoritos</button>
+              <button class="btn btn-primary" type="button">Agregar lista comparacion</button>
+              <button class="btn btn-primary" type="button">Correo a amigo</button>
+            </div>
+            <div class="product__overview__shareButtons"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row" id="contactUs">
       <div class="col-sm-7 text-center">
@@ -139,6 +181,5 @@
     <script src="./plugins/jquery/jquery-3.2.1.min.js"></script>
     <script src="./plugins/bootstrap/js/popper.min.js"></script>
     <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/details.min.css"/>
   </body>
 </html>

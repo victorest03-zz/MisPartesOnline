@@ -2,6 +2,59 @@ extends _layout.pug
 block styles
     link(rel="stylesheet", href="./css/details.min.css")
 block container
-    
-block scripts
-    link(rel="stylesheet", href="./css/details.min.css")
+    .container__title
+        .container__title__historyNavigate
+            ul
+                li
+                    span
+                        a(href="#")
+                            span Home
+                    span.delimiter /
+                li
+                    span
+                        a(href="#")
+                            span cocina
+                    span.delimiter /
+                li
+                    span
+                        a(href="#")
+                            span Accesorio
+                    span.delimiter /
+                li
+                    span
+                        a(href="#")
+                            span Mangera
+                    span.delimiter
+    .container__body
+        .product.row
+            .col-sm-6.product__gallery
+                .product__gallery__picture
+                    img.img-fluid(src="./image/product-large.jpeg", alt="")
+                .product__gallery__pictureThumbs
+                    .product__gallery__pictureThumbs__item
+                        img.img-fluid(src="./image/product-short-1.jpeg", alt="")
+                    .product__gallery__pictureThumbs__item
+                        img.img-fluid(src="./image/product-short-2.jpeg", alt="")
+            .col-sm-6.product__overview
+                .product__overview__name HTC One Mini Blue
+                .product__overview__descriptionShort HTC One and HTC One Mini now available in bright blue hue
+                .product__overview__availability
+                    span.label Availability: 
+                    span.value In stock
+                .product__overview__additionalDetails
+                    .sku
+                        span.label SKU:
+                        span.value OM_HTC_BL
+                .product__overview__prices
+                    span.price US$ 100.00
+                .product__overview__addToCart
+                    .input-group
+                        input.form-control(type="text" value="1")
+                        span.input-group-btn
+                            button.btn(type="button")
+                                i.fa.fa- AGREGAR A CARRITO
+                .product__overview__buttons
+                    button.btn.btn-primary(type="button") Agregar a favoritos
+                    button.btn.btn-primary(type="button") Agregar lista comparacion
+                    button.btn.btn-primary(type="button") Correo a amigo
+                .product__overview__shareButtons

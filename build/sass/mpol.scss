@@ -102,7 +102,7 @@ body{
             font-family: 'Roboto', sans-serif;
             text-transform: uppercase;
             border-bottom: solid 2px #EFEFEF;
-            
+            margin: 0 auto 30px;
             #navbarMenu{
                 ul{
                     li.nav-item{
@@ -165,6 +165,7 @@ body{
     .container{
         max-width: 100%;
         padding: 0 40px;
+        margin: 0 0 100px;
         @media (max-width: 768px){
             padding: 0 5px;
         }
@@ -340,5 +341,7 @@ body{
         border: 2px solid #e9eeef!important;
     }
 
-    
+    .form-check-input{
+        margin-right: 5px;
+    }
 }
