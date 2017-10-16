@@ -26,35 +26,67 @@ block container
                             span Mangera
                     span.delimiter
     .container__body
-        .product.row
-            .col-sm-6.product__gallery
-                .product__gallery__picture
+        .product__essential.row
+            .col-sm-6.product__essential__gallery
+                .product__essential__gallery__picture.text-center
                     img.img-fluid(src="./image/product-large.jpeg", alt="")
-                .product__gallery__pictureThumbs
-                    .product__gallery__pictureThumbs__item
+                .product__essential__gallery__pictureThumbs.text-center
+                    .product__essential__gallery__pictureThumbs__item
                         img.img-fluid(src="./image/product-short-1.jpeg", alt="")
-                    .product__gallery__pictureThumbs__item
+                    .product__essential__gallery__pictureThumbs__item
                         img.img-fluid(src="./image/product-short-2.jpeg", alt="")
-            .col-sm-6.product__overview
-                .product__overview__name HTC One Mini Blue
-                .product__overview__descriptionShort HTC One and HTC One Mini now available in bright blue hue
-                .product__overview__availability
+            .col-sm-6.product__essential__overview
+                .product__essential__overview__name HTC One Mini Blue
+                .product__essential__overview__descriptionShort HTC One and HTC One Mini now available in bright blue hue
+                .product__essential__overview__availability
                     span.label Availability: 
                     span.value In stock
-                .product__overview__additionalDetails
+                .product__essential__overview__additionalDetails
                     .sku
                         span.label SKU:
                         span.value OM_HTC_BL
-                .product__overview__prices
+                .product__essential__overview__prices
                     span.price US$ 100.00
-                .product__overview__addToCart
+                .product__essential__overview__addToCart
                     .input-group
                         input.form-control(type="text" value="1")
                         span.input-group-btn
                             button.btn(type="button")
                                 i.fa.fa- AGREGAR A CARRITO
-                .product__overview__buttons
+                .product__essential__overview__buttons
                     button.btn.btn-primary(type="button") Agregar a favoritos
                     button.btn.btn-primary(type="button") Agregar lista comparacion
                     button.btn.btn-primary(type="button") Correo a amigo
-                .product__overview__shareButtons
+            .col-sm-12.product__essential__fullDescription
+                p Combate contra los espacios de trabajo desordenados con la elegante PC de escritorio All-in-One IBM zBC12, que cuenta con potentes recursos informáticos y una impresionante pantalla panorámica de 20,1 pulgadas con una impresionante tecnología LCD XBRITE-HiColor. El IBM zBC12 negro tiene un micrófono incorporado y una cámara MOTION EYE con tecnología de rastreo facial que permite una fácil comunicación con amigos y familiares. Y tiene una grabadora de DVD integrada y el software Sony Movie Store para que pueda crear una biblioteca digital de entretenimiento para su visualización personal a su conveniencia. Fácil de configurar e incluso más fácil de usar, este JS-series All-in-One incluye un teclado de elegante diseño y un mouse USB.
+        .product__collateral.row
+            .col-sm-12.product__collateral__tagsBox
+                .product__collateral__title Etiquetas de productos
+        .product__related.row
+            .col-sm-12
+                .product__related__title Productos relacionados
+                .product__related__body.row
+                    - for(var i=0;i<6;i++){
+                    .col-md-2
+                        .item__container.border.row
+                            .item__discount
+                                span 36% Dscto.
+                            .item__brand
+                                img.img-fluid(src="./image/rational.png", alt="Rational")
+                            .item__img.col-md-12
+                                img.img-fluid(src="./image/product01.png", alt="Producto 01")
+                            .item__info.col-md-12
+                                span.item__info__sencondary Manufacturer Part #:10.00.512
+                                a.item__info__primary(href="#")
+                                    |Rational o-ring 26 x 3.5 (5 Pack)
+                            .item__shopping.col-md-12.row
+                                .item__shopping__price.col-md-12
+                                    span.item__shopping__price__current US$ 35.00
+                                .item__shopping__addCart.col-md-12
+                                    a.btn.addCart(href="#")
+                                        |AGREGAR AL CARRITO
+                                    a.btn.addWishlist(href="#")
+                                        i.fa.fa-heart-o
+                                    a.btn.addCompare(href="#")
+                                        i.fa.fa-compress
+                    - }
