@@ -13,7 +13,7 @@
     script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     -->
-    <link rel="stylesheet" href="./css/details.min.css"/>
+    <link rel="stylesheet" href="./css/checkOut.min.css"/>
   </head>
   <body>
     <header>
@@ -85,132 +85,149 @@
     </header>
     <div class="container">
       <div class="container__title">
-        <div class="container__title__historyNavigate">
-          <ul>
-            <li><span><a href="#"><span>Home</span></a></span><span class="delimiter">/</span></li>
-            <li><span><a href="#"><span>cocina</span></a></span><span class="delimiter">/</span></li>
-            <li><span><a href="#"><span>Accesorio</span></a></span><span class="delimiter">/</span></li>
-            <li><span><a href="#"><span>Mangera</span></a></span><span class="delimiter"></span></li>
-          </ul>
-        </div>
+        <h2 class="text-center">Checkout</h2>
       </div>
       <div class="container__body">
-        <div class="product__essential row">
-          <div class="col-sm-6 product__essential__gallery">
-            <div class="product__essential__gallery__picture text-center"><img class="img-fluid" src="./image/product-large.jpeg" alt=""/></div>
-            <div class="product__essential__gallery__pictureThumbs text-center">
-              <div class="product__essential__gallery__pictureThumbs__item"><img class="img-fluid" src="./image/product-short-1.jpeg" alt=""/></div>
-              <div class="product__essential__gallery__pictureThumbs__item"><img class="img-fluid" src="./image/product-short-2.jpeg" alt=""/></div>
+        <ol class="opc">
+          <li class="opc__item allow" id="opc_billing">
+            <div class="opc__item__title"><span class="number">1</span>
+              <h2 class="title">Billing address</h2>
             </div>
-          </div>
-          <div class="col-sm-6 product__essential__overview">
-            <div class="product__essential__overview__name">HTC One Mini Blue</div>
-            <div class="product__essential__overview__descriptionShort">HTC One and HTC One Mini now available in bright blue hue</div>
-            <div class="product__essential__overview__availability"><span class="label">Availability: </span><span class="value">In stock</span></div>
-            <div class="product__essential__overview__additionalDetails">
-              <div class="sku"><span class="label">SKU:</span><span class="value">OM_HTC_BL</span></div>
-            </div>
-            <div class="product__essential__overview__prices"><span class="price">US$ 100.00</span></div>
-            <div class="product__essential__overview__addToCart">
-              <div class="input-group">
-                <input class="form-control" type="text" value="1"/><span class="input-group-btn">
-                  <button class="btn" type="button">AGREGAR A CARRITO</button></span>
+            <div class="opc__item__body collapse">
+              <div class="form-group justify-content-center">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label font-weight-bold">
+                    <input class="form-check-input" type="checkbox" name=""/>Ship to the same address
+                  </label>
+                </div>
               </div>
-            </div>
-            <div class="product__essential__overview__buttons">
-              <button class="btn btn-primary" type="button">Agregar a favoritos</button>
-              <button class="btn btn-primary" type="button">Agregar lista comparacion</button>
-              <button class="btn btn-primary" type="button">Correo a amigo</button>
-            </div>
-          </div>
-          <div class="col-sm-12 product__essential__fullDescription">
-            <p>Combate contra los espacios de trabajo desordenados con la elegante PC de escritorio All-in-One IBM zBC12, que cuenta con potentes recursos informáticos y una impresionante pantalla panorámica de 20,1 pulgadas con una impresionante tecnología LCD XBRITE-HiColor. El IBM zBC12 negro tiene un micrófono incorporado y una cámara MOTION EYE con tecnología de rastreo facial que permite una fácil comunicación con amigos y familiares. Y tiene una grabadora de DVD integrada y el software Sony Movie Store para que pueda crear una biblioteca digital de entretenimiento para su visualización personal a su conveniencia. Fácil de configurar e incluso más fácil de usar, este JS-series All-in-One incluye un teclado de elegante diseño y un mouse USB.</p>
-          </div>
-        </div>
-        <div class="product__collateral row">
-          <div class="col-sm-12 product__collateral__tagsBox">
-            <div class="product__collateral__title">Etiquetas de productos</div>
-          </div>
-        </div>
-        <div class="product__related row">
-          <div class="col-sm-12">
-            <div class="product__related__title">Productos relacionados</div>
-            <div class="product__related__body row">
-              <div class="col-md-2">
-                <div class="item__container border row">
-                  <div class="item__discount"><span>36% Dscto.</span></div>
-                  <div class="item__brand"><img class="img-fluid" src="./image/rational.png" alt="Rational"/></div>
-                  <div class="item__img col-md-12"><img class="img-fluid" src="./image/product01.png" alt="Producto 01"/></div>
-                  <div class="item__info col-md-12"><span class="item__info__sencondary">Manufacturer Part #:10.00.512</span><a class="item__info__primary" href="#">Rational o-ring 26 x 3.5 (5 Pack)</a></div>
-                  <div class="item__shopping col-md-12 row">
-                    <div class="item__shopping__price col-md-12"><span class="item__shopping__price__current">US$ 35.00</span></div>
-                    <div class="item__shopping__addCart col-md-12"><a class="btn addCart" href="#">AGREGAR AL CARRITO</a><a class="btn addWishlist" href="#"><i class="fa fa-heart-o"></i></a><a class="btn addCompare" href="#"><i class="fa fa-compress"></i></a></div>
+              <div class="form-group row justify-content-center">
+                <label class="col-sm-12">Select a billing address from your address book or enter a new address.</label>
+                <select class="form-control" name="">
+                  <option value="0">John Smith, 21 West 52nd Street, New York, New York 10021, United States</option>
+                  <option value="1">New Address</option>
+                </select>
+              </div>
+              <div class="opc__item__body__form hidden-print">
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Nombres:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Apellidos:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Email:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Empresa:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Pais:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <select class="form-control" name="">
+                      <option value="0">Seleccione Pais</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Estado/Provincia:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <select class="form-control" name="">
+                      <option value="0">Seleccione Estado</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Ciudad:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Direccion 1:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Direccion 2:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Zip / Codigo Postal:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Celular:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="phone"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Celular:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="tel"/>
+                  </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <label class="col-sm-3 col-md-2 col-form-label text-left text-sm-right">Numero Fax:</label>
+                  <div class="col-sm-5 col-md-3">
+                    <input class="form-control" type="tel"/>
                   </div>
                 </div>
               </div>
-              <div class="col-md-2">
-                <div class="item__container border row">
-                  <div class="item__discount"><span>36% Dscto.</span></div>
-                  <div class="item__brand"><img class="img-fluid" src="./image/rational.png" alt="Rational"/></div>
-                  <div class="item__img col-md-12"><img class="img-fluid" src="./image/product01.png" alt="Producto 01"/></div>
-                  <div class="item__info col-md-12"><span class="item__info__sencondary">Manufacturer Part #:10.00.512</span><a class="item__info__primary" href="#">Rational o-ring 26 x 3.5 (5 Pack)</a></div>
-                  <div class="item__shopping col-md-12 row">
-                    <div class="item__shopping__price col-md-12"><span class="item__shopping__price__current">US$ 35.00</span></div>
-                    <div class="item__shopping__addCart col-md-12"><a class="btn addCart" href="#">AGREGAR AL CARRITO</a><a class="btn addWishlist" href="#"><i class="fa fa-heart-o"></i></a><a class="btn addCompare" href="#"><i class="fa fa-compress"></i></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="item__container border row">
-                  <div class="item__discount"><span>36% Dscto.</span></div>
-                  <div class="item__brand"><img class="img-fluid" src="./image/rational.png" alt="Rational"/></div>
-                  <div class="item__img col-md-12"><img class="img-fluid" src="./image/product01.png" alt="Producto 01"/></div>
-                  <div class="item__info col-md-12"><span class="item__info__sencondary">Manufacturer Part #:10.00.512</span><a class="item__info__primary" href="#">Rational o-ring 26 x 3.5 (5 Pack)</a></div>
-                  <div class="item__shopping col-md-12 row">
-                    <div class="item__shopping__price col-md-12"><span class="item__shopping__price__current">US$ 35.00</span></div>
-                    <div class="item__shopping__addCart col-md-12"><a class="btn addCart" href="#">AGREGAR AL CARRITO</a><a class="btn addWishlist" href="#"><i class="fa fa-heart-o"></i></a><a class="btn addCompare" href="#"><i class="fa fa-compress"></i></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="item__container border row">
-                  <div class="item__discount"><span>36% Dscto.</span></div>
-                  <div class="item__brand"><img class="img-fluid" src="./image/rational.png" alt="Rational"/></div>
-                  <div class="item__img col-md-12"><img class="img-fluid" src="./image/product01.png" alt="Producto 01"/></div>
-                  <div class="item__info col-md-12"><span class="item__info__sencondary">Manufacturer Part #:10.00.512</span><a class="item__info__primary" href="#">Rational o-ring 26 x 3.5 (5 Pack)</a></div>
-                  <div class="item__shopping col-md-12 row">
-                    <div class="item__shopping__price col-md-12"><span class="item__shopping__price__current">US$ 35.00</span></div>
-                    <div class="item__shopping__addCart col-md-12"><a class="btn addCart" href="#">AGREGAR AL CARRITO</a><a class="btn addWishlist" href="#"><i class="fa fa-heart-o"></i></a><a class="btn addCompare" href="#"><i class="fa fa-compress"></i></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="item__container border row">
-                  <div class="item__discount"><span>36% Dscto.</span></div>
-                  <div class="item__brand"><img class="img-fluid" src="./image/rational.png" alt="Rational"/></div>
-                  <div class="item__img col-md-12"><img class="img-fluid" src="./image/product01.png" alt="Producto 01"/></div>
-                  <div class="item__info col-md-12"><span class="item__info__sencondary">Manufacturer Part #:10.00.512</span><a class="item__info__primary" href="#">Rational o-ring 26 x 3.5 (5 Pack)</a></div>
-                  <div class="item__shopping col-md-12 row">
-                    <div class="item__shopping__price col-md-12"><span class="item__shopping__price__current">US$ 35.00</span></div>
-                    <div class="item__shopping__addCart col-md-12"><a class="btn addCart" href="#">AGREGAR AL CARRITO</a><a class="btn addWishlist" href="#"><i class="fa fa-heart-o"></i></a><a class="btn addCompare" href="#"><i class="fa fa-compress"></i></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="item__container border row">
-                  <div class="item__discount"><span>36% Dscto.</span></div>
-                  <div class="item__brand"><img class="img-fluid" src="./image/rational.png" alt="Rational"/></div>
-                  <div class="item__img col-md-12"><img class="img-fluid" src="./image/product01.png" alt="Producto 01"/></div>
-                  <div class="item__info col-md-12"><span class="item__info__sencondary">Manufacturer Part #:10.00.512</span><a class="item__info__primary" href="#">Rational o-ring 26 x 3.5 (5 Pack)</a></div>
-                  <div class="item__shopping col-md-12 row">
-                    <div class="item__shopping__price col-md-12"><span class="item__shopping__price__current">US$ 35.00</span></div>
-                    <div class="item__shopping__addCart col-md-12"><a class="btn addCart" href="#">AGREGAR AL CARRITO</a><a class="btn addWishlist" href="#"><i class="fa fa-heart-o"></i></a><a class="btn addCompare" href="#"><i class="fa fa-compress"></i></a></div>
-                  </div>
-                </div>
+              <div class="form-group row justify-content-center">
+                <button class="btn btn-success">CONTINUAR</button>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="opc__item" id="opc_shipping">
+            <div class="opc__item__title"><span class="number">2</span>
+              <h2 class="title">Shipping address</h2>
+            </div>
+            <div class="opc__item__body collapse"></div>
+          </li>
+          <li class="opc__item" id="opc_shippingMethod">
+            <div class="opc__item__title"><span class="number">3</span>
+              <h2 class="title">Shipping method</h2>
+            </div>
+            <div class="opc__item__body collapse"></div>
+          </li>
+          <li class="opc__item" id="opc_paymentMethod">
+            <div class="opc__item__title"><span class="number">4</span>
+              <h2 class="title">Payment method</h2>
+            </div>
+            <div class="opc__item__body collapse"></div>
+          </li>
+          <li class="opc__item" id="opc_paymentInfo">
+            <div class="opc__item__title"><span class="number">5</span>
+              <h2 class="title">Payment information</h2>
+            </div>
+            <div class="opc__item__body collapse"></div>
+          </li>
+          <li class="opc__item" id="opc_confirmOrder">
+            <div class="opc__item__title"><span class="number">6</span>
+              <h2 class="title">Confirm order</h2>
+            </div>
+            <div class="opc__item__body collapse"></div>
+          </li>
+        </ol>
       </div>
     </div>
     <div class="row" id="contactUs">
@@ -267,5 +284,6 @@
     <script src="./plugins/jquery/jquery-3.2.1.min.js"></script>
     <script src="./plugins/bootstrap/js/popper.min.js"></script>
     <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/checkOut.min.js"></script>
   </body>
 </html>

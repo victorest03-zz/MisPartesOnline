@@ -1,0 +1,107 @@
+extends _layout.pug
+block styles
+    link(rel="stylesheet", href="./css/checkOut.min.css")
+block container
+    .container__title
+        h2.text-center Checkout
+    .container__body
+        ol.opc
+            li.opc__item.allow#opc_billing
+                .opc__item__title
+                    span.number 1
+                    h2.title Billing address
+                .opc__item__body.collapse
+                    .form-group.justify-content-center
+                        .form-check.form-check-inline
+                                label.form-check-label.font-weight-bold
+                                    input.form-check-input(type="checkbox" name="")
+                                    | Ship to the same address
+                    .form-group.row.justify-content-center
+                        label.col-sm-12 Select a billing address from your address book or enter a new address.
+                        select.form-control(name='')
+                            option(value='0') John Smith, 21 West 52nd Street, New York, New York 10021, United States
+                            option(value='1') New Address
+                    .opc__item__body__form.hidden-print
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Nombres:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Apellidos:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Email:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Empresa:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Pais:
+                            .col-sm-5.col-md-3
+                                select.form-control(name='')
+                                    option(value='0') Seleccione Pais
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Estado/Provincia:
+                            .col-sm-5.col-md-3
+                                select.form-control(name='')
+                                    option(value='0') Seleccione Estado
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Ciudad:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Direccion 1:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Direccion 2:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Zip / Codigo Postal:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="text")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Celular:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="phone")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Celular:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="tel")
+                        .form-group.row.justify-content-center
+                            label.col-sm-3.col-md-2.col-form-label.text-left.text-sm-right Numero Fax:
+                            .col-sm-5.col-md-3
+                                input.form-control(type="tel")
+                    .form-group.row.justify-content-center
+                        button.btn.btn-success(type=submit) CONTINUAR
+            li.opc__item#opc_shipping
+                .opc__item__title
+                    span.number 2
+                    h2.title Shipping address
+                .opc__item__body.collapse
+            li.opc__item#opc_shippingMethod
+                .opc__item__title
+                    span.number 3
+                    h2.title Shipping method
+                .opc__item__body.collapse
+            li.opc__item#opc_paymentMethod
+                .opc__item__title
+                    span.number 4
+                    h2.title Payment method
+                .opc__item__body.collapse
+            li.opc__item#opc_paymentInfo
+                .opc__item__title
+                    span.number 5
+                    h2.title Payment information
+                .opc__item__body.collapse
+            li.opc__item#opc_confirmOrder
+                .opc__item__title
+                    span.number 6
+                    h2.title Confirm order
+                .opc__item__body.collapse
+block scripts
+    script(src="./js/checkOut.min.js")
